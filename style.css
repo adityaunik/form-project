@@ -1,0 +1,327 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+   
+}
+
+
+
+.container{
+    /* border: 2px solid red; */
+    display: grid;
+    gap: 1rem;
+    /* grid-template-columns: 100%; */
+    grid-template-areas: 
+    
+      ' header header header header '
+      ' aside aside section section '
+      ' footer footer footer footer '
+    ;
+
+}
+
+
+.nav{
+   padding: 0.8rem;
+   margin-left: 0.6rem;
+   margin-right: 0.6rem;
+   cursor: pointer;
+}
+
+.nav:hover{
+    background-color: aquamarine;
+    color: black;
+    border-radius: 10px;
+     
+}
+
+/* .border{
+     
+    border: 2px solid red;
+} */
+
+.header{
+    /* position: fixed; */
+    grid-area:header ;
+    /* width: 100vw; */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(31, 26, 26);
+    color: white;
+    
+}
+
+ .header i{
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+
+.aside{
+    grid-area: aside;
+    /* visibility: hidden; */
+    width: 100%;
+}
+
+.aside div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid green; */
+    background-color: rgb(241, 233, 222);
+}
+
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1,.aside i{
+    margin: 1rem;
+}
+
+.section{
+    grid-area: section;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+    
+form{
+    /* border:2px solid green ; */
+    padding: 2rem;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    margin: 0.4rem;
+    text-align: center;
+    height: 10%;
+}
+
+
+
+form ,h2{
+    width: 80%;
+    /* border: 2px solid green; */
+    margin-bottom: 0.2rem;
+    background-color: rgb(4, 5, 4,0.5);
+}
+
+form div{
+    margin: 0.6rem;
+    font-family: 'Bebas Neue', cursive;
+    /* border: 2px solid blue; */
+
+}
+
+input{
+    padding: 0.4rem;
+}
+
+#submit input{
+    cursor: pointer;
+}
+
+#submit input:hover{
+    background-color: rgb(96, 165, 226);
+    color: black;
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(203, 240, 240);
+    color: white;
+}
+
+.footer i{
+    padding: 1rem;
+    margin: 0.5rem;
+    cursor:pointer;
+}
+
+
+ @media (max-width: 500px){
+
+
+   
+
+    .container{
+
+        grid-template-areas: 
+    
+        '  header header header header '
+        '  aside  aside aside aside '
+        '  section section section section'
+        '  footer footer footer footer '
+      ;
+
+    
+    }
+     
+
+
+    .header{
+        flex-direction: column;
+       align-items: flex-start;
+    }
+
+    .header i,.nav{
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .nav{
+        padding-left: 0px;
+        margin-top: 1rem;
+        /* border: 2px solid rgb(223, 157, 34); */
+    } 
+
+   
+    .aside{
+        /* display: block; */
+        /* visibility: visible; */
+        /* border: 2px solid rgb(214, 196, 168); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    }
+
+.aside div{
+    width: 85%;
+    padding: 1rem;
+    margin-top: 1rem ;
+
+}
+
+    form , h2{
+
+        width: 65%;
+
+    }
+}
+ 
+
+@media  (min-width: 500px) and (max-width: 768px){
+    .container{
+
+        
+        grid-template-areas: 
+    
+        '  header header header header '
+        '  aside  aside aside aside '
+        '  section section section section'
+        '  footer footer footer footer '
+      ;
+
+    
+    }
+    
+
+    .aside{
+        display: block;
+        visibility: visible;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: center;
+       
+      
+    }
+
+.aside div{
+    width: 85%;
+    padding: 1rem;
+}
+
+form , h2{
+
+    width: 50%;
+
+}
+}
+
+@media  (min-width: 768px) and (max-width: 992px){
+    .container{
+
+        
+
+        grid-template-areas: 
+        
+        ' header header header header '
+        'aside aside aside aside '
+        '  section section section section  '
+        ' footer footer footer footer'
+        ;
+    
+    }
+
+    .aside{
+        /* display: none; */
+        /* visibility: visible; */
+    } 
+    form , h2{
+
+        width: 35%;
+
+    }
+
+} 
+
+@media (min-width: 992px) and (max-width:1199.9px){
+     .container{
+
+    grid-template-areas: 
+    ' header header header header '
+    'aside aside aside aside '
+    '  section section section section  '
+    ' footer footer footer footer'
+    ;
+
+}
+.aside{
+    /* visibility: hidden; */
+}
+form,h2{
+    width: 26%;
+}
+}
+
+@media  (min-width: 1200px){
+       .container{
+
+        grid-template-areas: 
+          ' header header header header '
+          'aside aside aside aside '
+          '  section section section section  '
+          ' footer footer footer footer'
+        ;
+    
+    }
+    .section{
+        /* border: 2px solid red; */
+    }
+
+.aside{
+    /* display: none; */
+    /* border: 2px solid red; */
+    /* visibility: visible; */
+}
+    form , h2{
+
+        width: 25%;
+
+    }
+} 
